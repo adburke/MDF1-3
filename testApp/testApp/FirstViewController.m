@@ -15,7 +15,7 @@
 @end
 
 @implementation FirstViewController
-@synthesize mainTable, locationShare;
+@synthesize mainTable, locationShare, delegate;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -95,6 +95,8 @@
     // Passes the selected row dictionary of personal data to the InfoViewController
     MoreInfoViewController *infoView = [[MoreInfoViewController alloc] initWithNibName:@"MoreInfoViewController" bundle:nil];
     if (infoView) {
+        self.delegate = (id)infoView;
+        [delegate viewSelectedInfo:[locationShare.locationsArray objectAtIndex: indexPath.row]];
         [self.navigationController pushViewController:infoView animated:TRUE];
     }
     

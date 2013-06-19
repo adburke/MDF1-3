@@ -10,4 +10,10 @@
 
 @interface MoreInfoViewController : UIViewController
 
+@property(nonatomic, weak) IBOutlet UILabel *hotelNameLabel;
+@property(nonatomic, weak) IBOutlet UILabel *hotelDescrLabel;
+@property(nonatomic, weak) IBOutlet UIImageView *hotelPic;
+
+@property (nonatomic, strong) NSDictionary *linkInfo;
+
 @end
