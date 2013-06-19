@@ -24,6 +24,8 @@
 		9674CD72176FF17E00182A04 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9674CD71176FF17E00182A04 /* second@2x.png */; };
 		9674CD75176FF17E00182A04 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9674CD73176FF17E00182A04 /* FirstViewController.xib */; };
 		9674CD78176FF17E00182A04 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9674CD76176FF17E00182A04 /* SecondViewController.xib */; };
+		96FD37621771321D00A01170 /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FD37601771321D00A01170 /* MoreInfoViewController.m */; };
+		96FD37631771321D00A01170 /* MoreInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FD37611771321D00A01170 /* MoreInfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,9 @@
 		9674CD71176FF17E00182A04 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		9674CD74176FF17E00182A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		9674CD77176FF17E00182A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		96FD375F1771321D00A01170 /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
+		96FD37601771321D00A01170 /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
+		96FD37611771321D00A01170 /* MoreInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,16 +103,15 @@
 			children = (
 				9674CD5C176FF17E00182A04 /* AppDelegate.h */,
 				9674CD5D176FF17E00182A04 /* AppDelegate.m */,
+				96FD375F1771321D00A01170 /* MoreInfoViewController.h */,
+				96FD37601771321D00A01170 /* MoreInfoViewController.m */,
 				9674CD65176FF17E00182A04 /* FirstViewController.h */,
 				9674CD66176FF17E00182A04 /* FirstViewController.m */,
-				9674CD68176FF17E00182A04 /* first.png */,
-				9674CD6A176FF17E00182A04 /* first@2x.png */,
 				9674CD6C176FF17E00182A04 /* SecondViewController.h */,
 				9674CD6D176FF17E00182A04 /* SecondViewController.m */,
-				9674CD6F176FF17E00182A04 /* second.png */,
-				9674CD71176FF17E00182A04 /* second@2x.png */,
 				9674CD73176FF17E00182A04 /* FirstViewController.xib */,
 				9674CD76176FF17E00182A04 /* SecondViewController.xib */,
+				96FD37611771321D00A01170 /* MoreInfoViewController.xib */,
 				9674CD54176FF17E00182A04 /* Supporting Files */,
 			);
 			path = testApp;
@@ -116,6 +120,10 @@
 		9674CD54176FF17E00182A04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9674CD71176FF17E00182A04 /* second@2x.png */,
+				9674CD6F176FF17E00182A04 /* second.png */,
+				9674CD68176FF17E00182A04 /* first.png */,
+				9674CD6A176FF17E00182A04 /* first@2x.png */,
 				9674CD55176FF17E00182A04 /* testApp-Info.plist */,
 				9674CD56176FF17E00182A04 /* InfoPlist.strings */,
 				9674CD59176FF17E00182A04 /* main.m */,
@@ -188,6 +196,7 @@
 				9674CD72176FF17E00182A04 /* second@2x.png in Resources */,
 				9674CD75176FF17E00182A04 /* FirstViewController.xib in Resources */,
 				9674CD78176FF17E00182A04 /* SecondViewController.xib in Resources */,
+				96FD37631771321D00A01170 /* MoreInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +211,7 @@
 				9674CD5E176FF17E00182A04 /* AppDelegate.m in Sources */,
 				9674CD67176FF17E00182A04 /* FirstViewController.m in Sources */,
 				9674CD6E176FF17E00182A04 /* SecondViewController.m in Sources */,
+				96FD37621771321D00A01170 /* MoreInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +344,7 @@
 				9674CD7D176FF17E00182A04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
