@@ -29,8 +29,11 @@
     if (self = [super init])
     {
         locationsArray = [[NSMutableArray alloc] initWithObjects:
-                         @{@"Hotel":@"Atlantasia", @"City":@"Atlanta", @"State":@"Georgia", @"Image":@"atlantasia.jpg"},
-                         nil];
+                          @{@"Hotel":@"Atlantasia", @"City":@"Atlanta", @"State":@"Georgia", @"Image":@"atlantasia.jpg"},
+                          @{@"Hotel":@"The Bostonian", @"City":@"Boston", @"State":@"Massachusetts", @"Image":@"the-bostonian.jpg"},
+                          @{@"Hotel":@"Tropicana", @"City":@"Cabo San Lucas", @"State":@"Mexico", @"Image":@"tropicana.jpg"},
+                          @{@"Hotel":@"NewYorker", @"City":@"New York City", @"State":@"New York", @"Image":@"newyorker.jpg"},
+                          nil];
     }
     return self;
 }

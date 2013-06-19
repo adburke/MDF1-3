@@ -25,6 +25,7 @@
         self.title = NSLocalizedString(@"bons hôtels", @"bons hôtels");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
         self.tabBarItem.title = NSLocalizedString(@"Hotel List", @"Hotel List");
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(onClick:)];
     }
     return self;
 }
@@ -42,6 +43,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)onClick:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    if (button) {
+        if ([self.navigationItem.rightBarButtonItem.title isEqual:@"Edit"]) {
+            [mainTable setEditing:true];
+            self.navigationItem.rightBarButtonItem.title = @"Done";
+            
+        } else {
+            [mainTable setEditing:false];
+            self.navigationItem.rightBarButtonItem.title = @"Edit";
+        }
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -90,12 +105,14 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Remove from array
-//        [linkArray removeObjectAtIndex:indexPath.row];
+        [locationShare.locationsArray removeObjectAtIndex:indexPath.row];
         
         // Remove from table view
         [mainTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
         
     }
 }
+
+
 
 @end

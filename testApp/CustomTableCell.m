@@ -26,4 +26,32 @@
     // Configure the view for the selected state
 }
 
+// Code found to edit location of edit objects
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:0.0f];
+    
+    for (UIView *subview in self.subviews) {
+        
+        
+        if ([NSStringFromClass([subview class]) isEqualToString:@"UITableViewCellDeleteConfirmationControl"]) {
+            CGRect newFrame = subview.frame;
+            newFrame.origin.x = 665;
+            newFrame.origin.y = 48;
+            subview.frame = newFrame;
+        }
+        else if ([NSStringFromClass([subview class]) isEqualToString:@"UITableViewCellEditControl"]) {
+            CGRect newFrame = subview.frame;
+            newFrame.origin.x = 10;
+            newFrame.origin.y = 48;
+            subview.frame = newFrame;
+        }
+    }
+    [UIView commitAnimations];
+}
+
 @end
