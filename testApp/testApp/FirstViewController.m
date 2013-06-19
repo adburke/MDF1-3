@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "MoreInfoViewController.h"
 
 @interface FirstViewController ()
 
@@ -34,6 +35,54 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Cell";
+    //This is the code for a base table view cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
+    if (cell == nil) {
+        // This is the code for a base table view cell
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    // Sets label text boxes with the correct data
+    cell.textLabel.text =@"Test";
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Allocates and sets up the delegate for InfoViewController
+    // Passes the selected row dictionary of personal data to the InfoViewController
+    MoreInfoViewController *infoView = [[MoreInfoViewController alloc] initWithNibName:@"MoreInfoViewController" bundle:nil];
+    if (infoView) {
+        [self.navigationController pushViewController:infoView animated:TRUE];
+    }
+    
+    
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Remove from array
+//        [linkArray removeObjectAtIndex:indexPath.row];
+        
+        // Remove from table view
+        [mainTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
+        
+    }
 }
 
 @end
