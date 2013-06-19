@@ -1,14 +1,14 @@
 //
-//  CustomCell.m
+//  CustomTableCell.m
 //  testApp
 //
 //  Created by Aaron Burke on 6/19/13.
 //  Copyright (c) 2013 Aaron Burke. All rights reserved.
 //
 
-#import "CustomCell.h"
+#import "CustomTableCell.h"
 
-@implementation CustomCell
+@implementation CustomTableCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

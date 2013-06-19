@@ -29,7 +29,7 @@
     if (self = [super init])
     {
         locationsArray = [[NSMutableArray alloc] initWithObjects:
-                         @{@"Hotel":@"Atlantasia", @"Location":@"Lengyel, Eric", @"Published":@"2012", @"Url":@"http://search.ebscohost.com.oclc.fullsail.edu:81/login.aspx?direct=true&db=nlebk&AN=365853&site=ehost-live"},
+                         @{@"Hotel":@"Atlantasia", @"City":@"Atlanta", @"State":@"Georgia", @"Image":@"atlantasia.jpg"},
                          nil];
     }
     return self;

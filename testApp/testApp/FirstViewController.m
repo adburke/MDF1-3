@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "MoreInfoViewController.h"
+#import "CustomTableCell.h"
 
 @interface FirstViewController ()
 
@@ -52,15 +53,23 @@
 {
     static NSString *cellIdentifier = @"Cell";
     //This is the code for a base table view cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
+    CustomTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         // This is the code for a base table view cell
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCellView" owner:nil options:nil];
+        for (UIView *view in views) {
+            if ([view isKindOfClass:[CustomTableCell class]]) {
+                cell = (CustomTableCell*)view;
+            }
+        }
     }
     // Sets label text boxes with the correct data
-    cell.textLabel.text = [[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Title"];
-    cell.textLabel.numberOfLines = 0;
-    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.hotelNameLabel.text = [[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Hotel"];
+    cell.hotelLocLabel.text = [NSString stringWithFormat:@"%@, %@",[[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"City"], [[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"State"]];
+    cell.hotelPic.image = [UIImage imageNamed:[[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Image"]];
+    
     
     return cell;
 }

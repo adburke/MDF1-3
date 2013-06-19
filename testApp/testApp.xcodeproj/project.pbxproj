@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		963C3094177142C900428546 /* LocationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963C3093177142C900428546 /* LocationsManager.m */; };
-		963C309617716AF300428546 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963C309517716AF300428546 /* CustomCell.xib */; };
-		963C3099177186D300428546 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 963C3098177186D300428546 /* CustomCell.m */; };
+		963C309F177189C200428546 /* cell-whbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 963C309A177189C200428546 /* cell-whbg.png */; };
+		963C30A0177189C200428546 /* the-bostonian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 963C309B177189C200428546 /* the-bostonian.jpg */; };
+		963C30A1177189C200428546 /* tropicana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 963C309C177189C200428546 /* tropicana.jpg */; };
+		963C30A2177189C200428546 /* atlantasia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 963C309D177189C200428546 /* atlantasia.jpg */; };
+		963C30A3177189C200428546 /* newyorker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 963C309E177189C200428546 /* newyorker.jpg */; };
+		963C30AA177197CE00428546 /* CustomTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963C30A9177197CE00428546 /* CustomTableCellView.xib */; };
+		963C30AD1771983E00428546 /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 963C30AC1771983E00428546 /* CustomTableCell.m */; };
 		9674CD4E176FF17E00182A04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674CD4D176FF17E00182A04 /* UIKit.framework */; };
 		9674CD50176FF17E00182A04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674CD4F176FF17E00182A04 /* Foundation.framework */; };
 		9674CD52176FF17E00182A04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674CD51176FF17E00182A04 /* CoreGraphics.framework */; };
@@ -34,9 +39,14 @@
 /* Begin PBXFileReference section */
 		963C3092177142C900428546 /* LocationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsManager.h; sourceTree = "<group>"; };
 		963C3093177142C900428546 /* LocationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsManager.m; sourceTree = "<group>"; };
-		963C309517716AF300428546 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
-		963C3097177186D300428546 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		963C3098177186D300428546 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		963C309A177189C200428546 /* cell-whbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cell-whbg.png"; path = "../../../Images/Cropped/cell-whbg.png"; sourceTree = "<group>"; };
+		963C309B177189C200428546 /* the-bostonian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "the-bostonian.jpg"; path = "../../../Images/Cropped/the-bostonian.jpg"; sourceTree = "<group>"; };
+		963C309C177189C200428546 /* tropicana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tropicana.jpg; path = ../../../Images/Cropped/tropicana.jpg; sourceTree = "<group>"; };
+		963C309D177189C200428546 /* atlantasia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = atlantasia.jpg; path = ../../../Images/Cropped/atlantasia.jpg; sourceTree = "<group>"; };
+		963C309E177189C200428546 /* newyorker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = newyorker.jpg; path = ../../../Images/Cropped/newyorker.jpg; sourceTree = "<group>"; };
+		963C30A9177197CE00428546 /* CustomTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomTableCellView.xib; path = ../CustomTableCellView.xib; sourceTree = "<group>"; };
+		963C30AB1771983E00428546 /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTableCell.h; path = ../CustomTableCell.h; sourceTree = "<group>"; };
+		963C30AC1771983E00428546 /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTableCell.m; path = ../CustomTableCell.m; sourceTree = "<group>"; };
 		9674CD4A176FF17E00182A04 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9674CD4D176FF17E00182A04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9674CD4F176FF17E00182A04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,9 +132,9 @@
 				9674CD73176FF17E00182A04 /* FirstViewController.xib */,
 				9674CD76176FF17E00182A04 /* SecondViewController.xib */,
 				96FD37611771321D00A01170 /* MoreInfoViewController.xib */,
-				963C309517716AF300428546 /* CustomCell.xib */,
-				963C3097177186D300428546 /* CustomCell.h */,
-				963C3098177186D300428546 /* CustomCell.m */,
+				963C30AB1771983E00428546 /* CustomTableCell.h */,
+				963C30AC1771983E00428546 /* CustomTableCell.m */,
+				963C30A9177197CE00428546 /* CustomTableCellView.xib */,
 				9674CD54176FF17E00182A04 /* Supporting Files */,
 			);
 			path = testApp;
@@ -133,6 +143,11 @@
 		9674CD54176FF17E00182A04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				963C309A177189C200428546 /* cell-whbg.png */,
+				963C309B177189C200428546 /* the-bostonian.jpg */,
+				963C309C177189C200428546 /* tropicana.jpg */,
+				963C309D177189C200428546 /* atlantasia.jpg */,
+				963C309E177189C200428546 /* newyorker.jpg */,
 				9674CD71176FF17E00182A04 /* second@2x.png */,
 				9674CD6F176FF17E00182A04 /* second.png */,
 				9674CD68176FF17E00182A04 /* first.png */,
@@ -210,7 +225,12 @@
 				9674CD75176FF17E00182A04 /* FirstViewController.xib in Resources */,
 				9674CD78176FF17E00182A04 /* SecondViewController.xib in Resources */,
 				96FD37631771321D00A01170 /* MoreInfoViewController.xib in Resources */,
-				963C309617716AF300428546 /* CustomCell.xib in Resources */,
+				963C309F177189C200428546 /* cell-whbg.png in Resources */,
+				963C30A0177189C200428546 /* the-bostonian.jpg in Resources */,
+				963C30A1177189C200428546 /* tropicana.jpg in Resources */,
+				963C30A2177189C200428546 /* atlantasia.jpg in Resources */,
+				963C30A3177189C200428546 /* newyorker.jpg in Resources */,
+				963C30AA177197CE00428546 /* CustomTableCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +247,7 @@
 				9674CD6E176FF17E00182A04 /* SecondViewController.m in Sources */,
 				96FD37621771321D00A01170 /* MoreInfoViewController.m in Sources */,
 				963C3094177142C900428546 /* LocationsManager.m in Sources */,
-				963C3099177186D300428546 /* CustomCell.m in Sources */,
+				963C30AD1771983E00428546 /* CustomTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
