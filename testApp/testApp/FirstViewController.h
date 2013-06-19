@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationsManager.h"
 
 @interface FirstViewController : UIViewController <UITableViewDelegate>
-{
-    IBOutlet UITableView *mainTable;
-}
+
+@property(nonatomic, weak) IBOutlet UITableView *mainTable;
+
+@property(nonatomic, strong) LocationsManager *locationShare;
 
 @end

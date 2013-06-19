@@ -14,19 +14,23 @@
 @end
 
 @implementation FirstViewController
+@synthesize mainTable, locationShare;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
+        self.title = NSLocalizedString(@"bons hôtels", @"bons hôtels");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.title = NSLocalizedString(@"Hotel List", @"Hotel List");
     }
     return self;
 }
 							
 - (void)viewDidLoad
 {
+    locationShare = [LocationsManager sharedInstance];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -40,7 +44,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return locationShare.locationsArray.count;
 }
 
 
@@ -54,7 +58,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     // Sets label text boxes with the correct data
-    cell.textLabel.text =@"Test";
+    cell.textLabel.text = [[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Title"];
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
