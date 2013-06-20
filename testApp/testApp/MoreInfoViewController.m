@@ -15,7 +15,7 @@
 
 @implementation MoreInfoViewController
 
-@synthesize linkInfo, hotelDescrLabel, hotelNameLabel, hotelPic;
+@synthesize linkInfo, hotelDescrLabel, hotelNameLabel, hotelPic, mapView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,7 +55,29 @@
     hotelNameLabel.text = linkInfo[@"Hotel"];
     hotelPic.image = [UIImage imageNamed:linkInfo[@"Image"]];
     
+    // Register the custom cell class 
     [self.collectionView registerClass:[CVCellController class] forCellWithReuseIdentifier:@"cvCell"];
+    
+    // Map view properties
+    NSArray *hotelLoc = linkInfo[@"Loc"]; // holds lat long in array -- [0] = lat [1] = long
+    double lat = [hotelLoc[0] doubleValue];
+    double lng = [hotelLoc[1] doubleValue];
+    
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.05f;
+    span.longitudeDelta = 0.05f;
+    
+    CLLocationCoordinate2D location;
+    location.latitude = lat;
+    location.longitude = lng;
+    
+    MKCoordinateRegion region;
+    region.center = location;
+    region.span = span;
+    mapView.region = region;
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

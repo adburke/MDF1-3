@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/Mapkit.h>
 
 @interface MoreInfoViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -14,6 +15,7 @@
 @property(nonatomic, weak) IBOutlet UILabel *hotelDescrLabel;
 @property(nonatomic, weak) IBOutlet UIImageView *hotelPic;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (nonatomic, strong) NSDictionary *linkInfo;
 
