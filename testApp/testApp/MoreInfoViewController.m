@@ -40,16 +40,12 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cvCell";
-    
     CVCellController *cell = (CVCellController *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    
+        
     NSArray *pictures = [linkInfo objectForKey:@"Pictures"];
-    
-    cell.pictureHolder.image = [UIImage imageNamed:pictures[0]];
-    
+    cell.pictureHolder.image = [UIImage imageNamed:pictures[indexPath.row]];
     
     return cell;
-   
 }
 
 - (void)viewDidLoad
