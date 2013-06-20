@@ -7,6 +7,7 @@
 //
 
 #import "MoreInfoViewController.h"
+#import "CVCellController.h"
 
 @interface MoreInfoViewController ()
 
@@ -30,6 +31,24 @@
     self.linkInfo = cellInfo;
 }
 
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"cvCell";
+    
+    CVCellController *cell = (CVCellController *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    cell.titleLabel.text = @"Test";
+    
+    return cell;
+   
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,6 +56,7 @@
     hotelNameLabel.text = linkInfo[@"Hotel"];
     hotelPic.image = [UIImage imageNamed:linkInfo[@"Image"]];
     
+    [self.collectionView registerClass:[CVCellController class] forCellWithReuseIdentifier:@"cvCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,3 +67,4 @@
 
 
 @end
+
