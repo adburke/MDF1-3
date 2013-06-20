@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
 
-@interface MoreInfoViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MoreInfoViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, MKMapViewDelegate>
 
 @property(nonatomic, weak) IBOutlet UILabel *hotelNameLabel;
 @property(nonatomic, weak) IBOutlet UILabel *hotelDescrLabel;

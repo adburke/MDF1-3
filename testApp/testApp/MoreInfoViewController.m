@@ -16,8 +16,6 @@
 
 @implementation MoreInfoViewController
 
-@synthesize linkInfo, hotelDescrLabel, hotelNameLabel, hotelPic, mapView;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,7 +33,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [[linkInfo objectForKey:@"Pictures"] count];
+    return [[self.linkInfo objectForKey:@"Pictures"] count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -43,7 +41,7 @@
     static NSString *cellIdentifier = @"cvCell";
     CVCellController *cell = (CVCellController *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
         
-    NSArray *pictures = [linkInfo objectForKey:@"Pictures"];
+    NSArray *pictures = [self.linkInfo objectForKey:@"Pictures"];
     cell.pictureHolder.image = [UIImage imageNamed:pictures[indexPath.row]];
     
     return cell;
@@ -53,13 +51,13 @@
 {
     switch (((UISegmentedControl *) sender).selectedSegmentIndex) {
         case 0:
-            mapView.mapType = MKMapTypeStandard;
+            self.mapView.mapType = MKMapTypeStandard;
             break;
         case 1:
-            mapView.mapType = MKMapTypeSatellite;
+            self.mapView.mapType = MKMapTypeSatellite;
             break;
         case 2:
-            mapView.mapType = MKMapTypeHybrid;
+            self.mapView.mapType = MKMapTypeHybrid;
             break;
             
         default:
@@ -71,14 +69,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    hotelNameLabel.text = linkInfo[@"Hotel"];
-    hotelPic.image = [UIImage imageNamed:linkInfo[@"Image"]];
+    self.hotelNameLabel.text = self.linkInfo[@"Hotel"];
+    self.hotelPic.image = [UIImage imageNamed:self.linkInfo[@"Image"]];
     
     // Register the custom cell class 
     [self.collectionView registerClass:[CVCellController class] forCellWithReuseIdentifier:@"cvCell"];
     
     // Map view properties
-    NSArray *hotelLoc = linkInfo[@"Loc"]; // holds lat long in array -- [0] = lat [1] = long
+    NSArray *hotelLoc = self.linkInfo[@"Loc"]; // holds lat long in array -- [0] = lat [1] = long
     double lat = [hotelLoc[0] doubleValue];
     double lng = [hotelLoc[1] doubleValue];
     
@@ -93,11 +91,11 @@
     MKCoordinateRegion region;
     region.center = location;
     region.span = span;
-    mapView.region = region;
+    self.mapView.region = region;
     
-    MapAnnotation *annotation = [[MapAnnotation alloc] initWithInfo:linkInfo[@"Hotel"] subText:@"Test" coord:location];
+    MapAnnotation *annotation = [[MapAnnotation alloc] initWithInfo:self.linkInfo[@"Hotel"] subText:@"Test" coord:location];
     if (annotation) {
-        [mapView addAnnotation:annotation];
+        [self.mapView addAnnotation:annotation];
     }
     
     

@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "MapAnnotation.h"
 
 @interface SecondViewController ()
 
@@ -18,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
+        self.title = NSLocalizedString(@"Map View", @"Map View");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;
@@ -26,8 +27,11 @@
 							
 - (void)viewDidLoad
 {
+    self.locationShare = [LocationsManager sharedInstance];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

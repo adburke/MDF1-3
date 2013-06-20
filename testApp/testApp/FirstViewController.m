@@ -15,8 +15,6 @@
 @end
 
 @implementation FirstViewController
-@synthesize mainTable, locationShare, delegate;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +30,7 @@
 							
 - (void)viewDidLoad
 {
-    locationShare = [LocationsManager sharedInstance];
+    self.locationShare = [LocationsManager sharedInstance];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -48,11 +46,11 @@
     UIButton *button = (UIButton*)sender;
     if (button) {
         if ([self.navigationItem.rightBarButtonItem.title isEqual:@"Edit"]) {
-            [mainTable setEditing:true];
+            [self.self.mainTable setEditing:true];
             self.navigationItem.rightBarButtonItem.title = @"Done";
             
         } else {
-            [mainTable setEditing:false];
+            [self.mainTable setEditing:false];
             self.navigationItem.rightBarButtonItem.title = @"Edit";
         }
     }
@@ -60,7 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return locationShare.locationsArray.count;
+    return self.locationShare.locationsArray.count;
 }
 
 
@@ -81,9 +79,9 @@
         }
     }
     // Sets label text boxes with the correct data
-    cell.hotelNameLabel.text = [[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Hotel"];
-    cell.hotelLocLabel.text = [NSString stringWithFormat:@"%@, %@",[[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"City"], [[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"State"]];
-    cell.hotelPic.image = [UIImage imageNamed:[[locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Image"]];
+    cell.hotelNameLabel.text = [[self.locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Hotel"];
+    cell.hotelLocLabel.text = [NSString stringWithFormat:@"%@, %@",[[self.locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"City"], [[self.locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"State"]];
+    cell.hotelPic.image = [UIImage imageNamed:[[self.locationShare.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Image"]];
     
     
     return cell;
@@ -96,7 +94,7 @@
     MoreInfoViewController *infoView = [[MoreInfoViewController alloc] initWithNibName:@"MoreInfoViewController" bundle:nil];
     if (infoView) {
         self.delegate = (id)infoView;
-        [delegate viewSelectedInfo:[locationShare.locationsArray objectAtIndex: indexPath.row]];
+        [self.delegate viewSelectedInfo:[self.locationShare.locationsArray objectAtIndex: indexPath.row]];
         [self.navigationController pushViewController:infoView animated:TRUE];
     }
     
@@ -107,10 +105,10 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Remove from array
-        [locationShare.locationsArray removeObjectAtIndex:indexPath.row];
+        [self.locationShare.locationsArray removeObjectAtIndex:indexPath.row];
         
         // Remove from table view
-        [mainTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
+        [self.mainTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
         
     }
 }

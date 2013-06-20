@@ -10,8 +10,6 @@
 
 @implementation MapAnnotation
 
-@synthesize title, subtitle, coordinate;
-
 -(id)initWithInfo:(NSString*)titleText subText:(NSString*)subText coord:(CLLocationCoordinate2D)coord
 {
     if ((self = [super init])) {
