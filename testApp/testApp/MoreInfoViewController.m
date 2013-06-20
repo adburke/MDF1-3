@@ -8,6 +8,7 @@
 
 #import "MoreInfoViewController.h"
 #import "CVCellController.h"
+#import "MapAnnotation.h"
 
 @interface MoreInfoViewController ()
 
@@ -94,6 +95,10 @@
     region.span = span;
     mapView.region = region;
     
+    MapAnnotation *annotation = [[MapAnnotation alloc] initWithInfo:linkInfo[@"Hotel"] subText:@"Test" coord:location];
+    if (annotation) {
+        [mapView addAnnotation:annotation];
+    }
     
     
 }
