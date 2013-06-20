@@ -34,6 +34,11 @@
 		9674CD78176FF17E00182A04 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9674CD76176FF17E00182A04 /* SecondViewController.xib */; };
 		96D310AF1772B89D00BC84B3 /* CVCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D310AE1772B89D00BC84B3 /* CVCellController.m */; };
 		96D310B31772B94600BC84B3 /* CVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D310B21772B94600BC84B3 /* CVCell.xib */; };
+		96D310B91772C53900BC84B3 /* pic-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96D310B41772C53900BC84B3 /* pic-5.jpg */; };
+		96D310BA1772C53900BC84B3 /* pic-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96D310B51772C53900BC84B3 /* pic-4.jpg */; };
+		96D310BB1772C53900BC84B3 /* pic-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96D310B61772C53900BC84B3 /* pic-3.jpg */; };
+		96D310BC1772C53900BC84B3 /* pic-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96D310B71772C53900BC84B3 /* pic-2.jpg */; };
+		96D310BD1772C53900BC84B3 /* pic-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96D310B81772C53900BC84B3 /* pic-1.jpg */; };
 		96F151CF177228E40093AC2C /* custom-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F151CE177228E40093AC2C /* custom-arrow.png */; };
 		96FD37621771321D00A01170 /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FD37601771321D00A01170 /* MoreInfoViewController.m */; };
 		96FD37631771321D00A01170 /* MoreInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FD37611771321D00A01170 /* MoreInfoViewController.xib */; };
@@ -76,6 +81,11 @@
 		96D310AD1772B89D00BC84B3 /* CVCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVCellController.h; sourceTree = "<group>"; };
 		96D310AE1772B89D00BC84B3 /* CVCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVCellController.m; sourceTree = "<group>"; };
 		96D310B21772B94600BC84B3 /* CVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVCell.xib; sourceTree = "<group>"; };
+		96D310B41772C53900BC84B3 /* pic-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pic-5.jpg"; path = "../../../Images/Cropped/pic-5.jpg"; sourceTree = "<group>"; };
+		96D310B51772C53900BC84B3 /* pic-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pic-4.jpg"; path = "../../../Images/Cropped/pic-4.jpg"; sourceTree = "<group>"; };
+		96D310B61772C53900BC84B3 /* pic-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pic-3.jpg"; path = "../../../Images/Cropped/pic-3.jpg"; sourceTree = "<group>"; };
+		96D310B71772C53900BC84B3 /* pic-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pic-2.jpg"; path = "../../../Images/Cropped/pic-2.jpg"; sourceTree = "<group>"; };
+		96D310B81772C53900BC84B3 /* pic-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pic-1.jpg"; path = "../../../Images/Cropped/pic-1.jpg"; sourceTree = "<group>"; };
 		96F151CE177228E40093AC2C /* custom-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "custom-arrow.png"; path = "../../Images/Cropped/images/custom-arrow.png"; sourceTree = "<group>"; };
 		96FD375F1771321D00A01170 /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
 		96FD37601771321D00A01170 /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
@@ -154,6 +164,11 @@
 		9674CD54176FF17E00182A04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96D310B41772C53900BC84B3 /* pic-5.jpg */,
+				96D310B51772C53900BC84B3 /* pic-4.jpg */,
+				96D310B61772C53900BC84B3 /* pic-3.jpg */,
+				96D310B71772C53900BC84B3 /* pic-2.jpg */,
+				96D310B81772C53900BC84B3 /* pic-1.jpg */,
 				963C309A177189C200428546 /* cell-whbg.png */,
 				963C309B177189C200428546 /* the-bostonian.jpg */,
 				963C309C177189C200428546 /* tropicana.jpg */,
@@ -244,6 +259,11 @@
 				963C30AA177197CE00428546 /* CustomTableCellView.xib in Resources */,
 				96F151CF177228E40093AC2C /* custom-arrow.png in Resources */,
 				96D310B31772B94600BC84B3 /* CVCell.xib in Resources */,
+				96D310B91772C53900BC84B3 /* pic-5.jpg in Resources */,
+				96D310BA1772C53900BC84B3 /* pic-4.jpg in Resources */,
+				96D310BB1772C53900BC84B3 /* pic-3.jpg in Resources */,
+				96D310BC1772C53900BC84B3 /* pic-2.jpg in Resources */,
+				96D310BD1772C53900BC84B3 /* pic-1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

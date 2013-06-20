@@ -34,7 +34,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return [[linkInfo objectForKey:@"Pictures"] count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -43,7 +43,10 @@
     
     CVCellController *cell = (CVCellController *)[collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.titleLabel.text = @"Test";
+    NSArray *pictures = [linkInfo objectForKey:@"Pictures"];
+    
+    cell.pictureHolder.image = [UIImage imageNamed:pictures[0]];
+    
     
     return cell;
    
