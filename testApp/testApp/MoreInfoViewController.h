@@ -16,7 +16,11 @@
 @property(nonatomic, weak) IBOutlet UIImageView *hotelPic;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *mapSegCtrl;
 
 @property (nonatomic, strong) NSDictionary *linkInfo;
+
+// Method for segmented control of mapView map type
+-(IBAction)onChange:(id)sender;
 
 @end
