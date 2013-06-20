@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9605408E17734C5800CEDF1D /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605408D17734C5800CEDF1D /* MapAnnotation.m */; };
 		963C3094177142C900428546 /* LocationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963C3093177142C900428546 /* LocationsManager.m */; };
 		963C309F177189C200428546 /* cell-whbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 963C309A177189C200428546 /* cell-whbg.png */; };
 		963C30A0177189C200428546 /* the-bostonian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 963C309B177189C200428546 /* the-bostonian.jpg */; };
@@ -46,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9605408C17734C5800CEDF1D /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		9605408D17734C5800CEDF1D /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		963C3092177142C900428546 /* LocationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsManager.h; sourceTree = "<group>"; };
 		963C3093177142C900428546 /* LocationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsManager.m; sourceTree = "<group>"; };
 		963C309A177189C200428546 /* cell-whbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cell-whbg.png"; path = "../../../Images/Cropped/cell-whbg.png"; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 			children = (
 				9674CD5C176FF17E00182A04 /* AppDelegate.h */,
 				9674CD5D176FF17E00182A04 /* AppDelegate.m */,
+				9605408C17734C5800CEDF1D /* MapAnnotation.h */,
+				9605408D17734C5800CEDF1D /* MapAnnotation.m */,
 				963C3092177142C900428546 /* LocationsManager.h */,
 				963C3093177142C900428546 /* LocationsManager.m */,
 				963C30AB1771983E00428546 /* CustomTableCell.h */,
@@ -286,6 +291,7 @@
 				963C3094177142C900428546 /* LocationsManager.m in Sources */,
 				963C30AD1771983E00428546 /* CustomTableCell.m in Sources */,
 				96D310AF1772B89D00BC84B3 /* CVCellController.m in Sources */,
+				9605408E17734C5800CEDF1D /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
