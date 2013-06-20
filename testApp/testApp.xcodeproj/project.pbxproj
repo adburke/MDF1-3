@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9605408E17734C5800CEDF1D /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9605408D17734C5800CEDF1D /* MapAnnotation.m */; };
+		9605409517735F9E00CEDF1D /* orlandian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9605408F17735F9E00CEDF1D /* orlandian.jpg */; };
+		9605409617735F9E00CEDF1D /* nashvillage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9605409017735F9E00CEDF1D /* nashvillage.jpg */; };
+		9605409717735F9E00CEDF1D /* los-ango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9605409117735F9E00CEDF1D /* los-ango.jpg */; };
+		9605409817735F9E00CEDF1D /* the-dallaso.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9605409217735F9E00CEDF1D /* the-dallaso.jpg */; };
+		9605409917735F9E00CEDF1D /* cozume.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9605409317735F9E00CEDF1D /* cozume.jpg */; };
+		9605409A17735F9E00CEDF1D /* chitown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9605409417735F9E00CEDF1D /* chitown.jpg */; };
 		963C3094177142C900428546 /* LocationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963C3093177142C900428546 /* LocationsManager.m */; };
 		963C309F177189C200428546 /* cell-whbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 963C309A177189C200428546 /* cell-whbg.png */; };
 		963C30A0177189C200428546 /* the-bostonian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 963C309B177189C200428546 /* the-bostonian.jpg */; };
@@ -49,6 +55,12 @@
 /* Begin PBXFileReference section */
 		9605408C17734C5800CEDF1D /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		9605408D17734C5800CEDF1D /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		9605408F17735F9E00CEDF1D /* orlandian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = orlandian.jpg; path = ../../../Images/Cropped/orlandian.jpg; sourceTree = "<group>"; };
+		9605409017735F9E00CEDF1D /* nashvillage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nashvillage.jpg; path = ../../../Images/Cropped/nashvillage.jpg; sourceTree = "<group>"; };
+		9605409117735F9E00CEDF1D /* los-ango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "los-ango.jpg"; path = "../../../Images/Cropped/los-ango.jpg"; sourceTree = "<group>"; };
+		9605409217735F9E00CEDF1D /* the-dallaso.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "the-dallaso.jpg"; path = "../../../Images/Cropped/the-dallaso.jpg"; sourceTree = "<group>"; };
+		9605409317735F9E00CEDF1D /* cozume.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cozume.jpg; path = ../../../Images/Cropped/cozume.jpg; sourceTree = "<group>"; };
+		9605409417735F9E00CEDF1D /* chitown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chitown.jpg; path = ../../../Images/Cropped/chitown.jpg; sourceTree = "<group>"; };
 		963C3092177142C900428546 /* LocationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsManager.h; sourceTree = "<group>"; };
 		963C3093177142C900428546 /* LocationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsManager.m; sourceTree = "<group>"; };
 		963C309A177189C200428546 /* cell-whbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cell-whbg.png"; path = "../../../Images/Cropped/cell-whbg.png"; sourceTree = "<group>"; };
@@ -173,6 +185,12 @@
 		9674CD54176FF17E00182A04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9605408F17735F9E00CEDF1D /* orlandian.jpg */,
+				9605409017735F9E00CEDF1D /* nashvillage.jpg */,
+				9605409117735F9E00CEDF1D /* los-ango.jpg */,
+				9605409217735F9E00CEDF1D /* the-dallaso.jpg */,
+				9605409317735F9E00CEDF1D /* cozume.jpg */,
+				9605409417735F9E00CEDF1D /* chitown.jpg */,
 				96D310B41772C53900BC84B3 /* pic-5.jpg */,
 				96D310B51772C53900BC84B3 /* pic-4.jpg */,
 				96D310B61772C53900BC84B3 /* pic-3.jpg */,
@@ -273,6 +291,12 @@
 				96D310BB1772C53900BC84B3 /* pic-3.jpg in Resources */,
 				96D310BC1772C53900BC84B3 /* pic-2.jpg in Resources */,
 				96D310BD1772C53900BC84B3 /* pic-1.jpg in Resources */,
+				9605409517735F9E00CEDF1D /* orlandian.jpg in Resources */,
+				9605409617735F9E00CEDF1D /* nashvillage.jpg in Resources */,
+				9605409717735F9E00CEDF1D /* los-ango.jpg in Resources */,
+				9605409817735F9E00CEDF1D /* the-dallaso.jpg in Resources */,
+				9605409917735F9E00CEDF1D /* cozume.jpg in Resources */,
+				9605409A17735F9E00CEDF1D /* chitown.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
