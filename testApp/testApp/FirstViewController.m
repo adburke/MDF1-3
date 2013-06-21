@@ -65,12 +65,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    //This is the code for a base table view cell
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
     CustomTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        // This is the code for a base table view cell
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomTableCellView" owner:nil options:nil];
         for (UIView *view in views) {
             if ([view isKindOfClass:[CustomTableCell class]]) {

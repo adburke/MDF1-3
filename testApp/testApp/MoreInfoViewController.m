@@ -65,38 +65,58 @@
     }
 }
 
+// NSURL method
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     [self.responseData setLength:0];
 }
 
+// NSURL method
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     [self.responseData appendData:data];
 }
 
+// NSURL method
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
     NSLog(@"%@",msg);
 }
 
-//All the data was loaded, let's see what we've got...
+// Method to check received data from NSURL call - used for setting outlets of weather block
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSError *myError = nil;
+    
+    // Result of api call
     NSDictionary *results = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves  error:&myError];
+    
+    // Drilling down through data - created for ease of use below
     NSArray *forecastday = results[@"forecast"][@"simpleforecast"][@"forecastday"];
-    //NSLog(@"forecastday=%@", forecastday);
+    
+    // High temperature
     NSString *high = forecastday[0][@"high"][@"fahrenheit"];
-    NSLog(@"high=%@", high);
+    //NSLog(@"high=%@", high);
     self.highTemp.text = [NSString stringWithFormat:@"%@%@ F", high, @"\u00B0"];
+    
+    // Low temperature
     NSString *low = forecastday[0][@"low"][@"fahrenheit"];
-    NSLog(@"low=%@", low);
+    //NSLog(@"low=%@", low);
     self.lowTemp.text = [NSString stringWithFormat:@"%@%@ F", low, @"\u00B0"];
+    
+    // Current conditions
     NSString *conditions = forecastday[0][@"conditions"];
     self.currentCondition.text = conditions;
     
+    // Date dictionary returned from api - created for ease of use below
+    NSDictionary *dateInfo = forecastday[0][@"date"];
+    
+    self.subForecastDate.text = [NSString stringWithFormat:@"Local Forecast: %@ %@ %@, %@",dateInfo[@"weekday_short"], dateInfo[@"day"], dateInfo[@"monthname"], dateInfo[@"year"]];
+    
+    self.forecastDate.text = [NSString stringWithFormat:@"%@, %@ %@", dateInfo[@"weekday_short"], dateInfo[@"monthname"], dateInfo[@"day"]];
+    
+    // Conditions returned and their corresponding images from the api
     NSDictionary *conditionImages = @{@"Chance of Flurries":@"chanceflurries.gif",
                                       @"Chance of Rain":@"chancerain.gif",
                                       @"Chance of Freezing Rain":@"chancesleet.gif",
@@ -124,9 +144,9 @@
                                       @"Scattered Clouds":@"partlycloudy.gif"
                                       };
     
+    // Iterate through conditions to find the correct image that matches
     for (id key in conditionImages) {
         if ([conditions isEqualToString:key]) {
-            //NSString *conditionImg = conditionImages[key];
             self.conditionImage.image = [UIImage imageNamed:conditionImages[key]];
         }
     }
@@ -143,14 +163,21 @@
 {
     [super viewDidLoad];
     
+    self.hotelDescrLabel.numberOfLines=0;
+    self.hotelDescrLabel.lineBreakMode= NSLineBreakByTruncatingTail;
+    self.hotelDescrLabel.text = self.linkInfo[@"Description"];
+    
     NSArray *hotelLoc = self.linkInfo[@"Loc"]; // holds lat long in array -- [0] = lat [1] = long
     double lat = [hotelLoc[0] doubleValue];
     double lng = [hotelLoc[1] doubleValue];
     
+    // Sets up api call with lat long values
     NSString *urlString = [NSString stringWithFormat:@"http://api.wunderground.com/api/d97410dd6342cdac/forecast/q/%0.1f,%0.1f.json", lat, lng];
     
+    // Create the request
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:
                                 [NSURL URLWithString:urlString]];
+    // Send the request
     NSURLConnection *theConnection=[[NSURLConnection alloc]
                                     initWithRequest:theRequest delegate:self];
     if(theConnection){

@@ -46,9 +46,7 @@
     
     // Iterate through singleton to pull out location data - used fast enumeration on array and block on dictionary
     for (id obj1 in self.locationShare.locationsArray){
-        //NSLog(@"obj=%@", obj1);
         [obj1 enumerateKeysAndObjectsUsingBlock:^(id key, id obj2, BOOL *stop) {
-            //NSLog(@"%@ => %@", key, obj2);
             if ([key isEqualToString:@"Loc"]) {
                 CLLocationCoordinate2D location;
                 location.latitude = [obj2[0] doubleValue];

@@ -22,6 +22,7 @@
 
 @property(nonatomic, weak) IBOutlet UITableView *mainTable;
 
+// Singleton data holder
 @property(nonatomic, strong) LocationsManager *locationShare;
 
 // Property id of the delegate

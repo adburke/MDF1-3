@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        // Needed this code to register the nib
         NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"CVCell" owner:self options:nil];
         
         if ([arrayOfViews count] < 1) {

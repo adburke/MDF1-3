@@ -13,6 +13,8 @@
 @interface SecondViewController : UIViewController <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+// Singleton data holder
 @property(nonatomic, strong) LocationsManager *locationShare;
 
 @end
