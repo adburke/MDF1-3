@@ -163,8 +163,10 @@
 {
     [super viewDidLoad];
     
+    // Used to wrap text in label
     self.hotelDescrLabel.numberOfLines=0;
     self.hotelDescrLabel.lineBreakMode= NSLineBreakByTruncatingTail;
+    
     self.hotelDescrLabel.text = self.linkInfo[@"Description"];
     
     NSArray *hotelLoc = self.linkInfo[@"Loc"]; // holds lat long in array -- [0] = lat [1] = long
