@@ -132,11 +132,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testApp/MoreInfoViewController.m"
-         timestampString = "393439007.695044"
+         timestampString = "393465943.63768"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
+         startingLineNumber = "172"
+         endingLineNumber = "172"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -145,11 +145,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testApp/MoreInfoViewController.m"
-         timestampString = "393439007.695044"
+         timestampString = "393465943.63768"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
+         startingLineNumber = "170"
+         endingLineNumber = "170"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -158,11 +158,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testApp/MoreInfoViewController.m"
-         timestampString = "393439007.695044"
+         timestampString = "393465943.63768"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "89"
-         endingLineNumber = "89"
+         startingLineNumber = "177"
+         endingLineNumber = "177"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -171,11 +171,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testApp/MoreInfoViewController.m"
-         timestampString = "393439007.695044"
+         timestampString = "393465943.63768"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "83"
-         endingLineNumber = "83"
+         startingLineNumber = "171"
+         endingLineNumber = "171"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -184,11 +184,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testApp/MoreInfoViewController.m"
-         timestampString = "393439007.695044"
+         timestampString = "393465943.63768"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "90"
-         endingLineNumber = "90"
+         startingLineNumber = "178"
+         endingLineNumber = "178"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
